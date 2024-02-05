@@ -1,0 +1,177 @@
+@media (min-width: 721px) {
+.OrderProd{
+  width: 300px;
+  height: 120px;
+  border: 2px solid #0997de;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+}
+
+
+.ProdImg{
+  width: 100px;
+  margin: 10px;
+  float: left;
+}
+
+
+.ProdImg img{
+  width: 100px;
+}
+
+
+.ProdName{
+  width: 160px;
+  margin: 5px 10px 0 0;
+  height: 90px;
+  float: right;
+  text-align: right;
+  font-size: 12px;
+}
+
+
+.ProdPrice{
+  width: 180px;
+  height: 20px;
+  float: right;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.OrderCont{
+  width: 500px;
+  border: 2px solid #0997de;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+
+.OrderField{
+  display: block;
+  width: 400px;
+  height: 25px;
+  margin: 5px auto 40px auto;
+  border: 1px solid #0997de;
+  border-radius: 6px;
+}
+
+
+.OrderCont p{
+  margin: 5px 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+.OrderCont select {
+  margin: 10px auto;
+  display: block;
+}
+
+
+.ConfirmButton{
+  display: block;
+  margin: 40px auto;
+  width: 110px;
+  height: 30px;
+  border: 1.5px solid yellow;
+  background-color: yellow;
+  text-align: center;
+}
+
+
+.ConfirmButton:hover{
+  border: 1.5px solid black;
+}
+}
+
+
+
+@media (max-width: 720px) {
+.OrderProd{
+  width: 80%;
+  height: auto;
+  border: 2px solid #0997de;
+  border-radius: 8px;
+  margin: 0 auto 10px auto;
+}
+
+
+.ProdImg{
+  text-align: center;
+  height: 150px;
+  margin: 10px auto;
+}
+
+
+.ProdImg img{
+  height: 150px;
+}
+
+
+
+.ProdName{
+  width: 90%;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.ProdPrice{
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.OrderCont{
+  width: 80%;
+  border: 2px solid #0997de;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+
+.OrderField{
+  display: block;
+  width: 90%;
+  height: 20px;
+  margin: 3px auto 25px auto;
+  border: 1px solid #0997de;
+  border-radius: 4px;
+}
+
+
+.OrderCont p{
+  margin: 5px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.OrderCont select {
+  margin: 10px auto;
+  display: block;
+}
+
+
+.ConfirmButton{
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 30px auto;
+  background-color: yellow;
+  text-align: center;
+  border: 1px solid yellow;
+}
+
+
+.ConfirmButton:hover{
+  border: 1px solid black;
+}
+
+}

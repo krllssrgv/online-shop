@@ -1,0 +1,73 @@
+<html lang="ru">
+  <head>
+    <title> Панель управления - {% block pagename %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/Admin.css') }}">
+    {% block styles %} {% endblock %}
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='admin_style/Img/Icon.png') }}" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+      #MainButton{ {{ border.main }} }
+      #ShopButton{ {{ border.shop }} }
+      #OrdersButton{ {{ border.orders }} }
+      #CallsButton{ {{ border.calls }} }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="LeftTuner">
+
+      <a href="{{ url_for('admin_main') }}" style="text-decoration: none; color: black;">
+        <div class="Page" id="MainButton">
+          <img src="{{ url_for('static', filename='admin_style/Img/Home.png') }}">
+          <p>Главная</p>
+        </div>
+      </a>
+
+      <a href="{{ url_for('admin_shop') }}" style="text-decoration: none; color: black;">
+        <div class="Page" id="ShopButton">
+          <img src="{{ url_for('static', filename='admin_style/Img/Shop.png') }}">
+          <p>Магазин</p>
+        </div>
+      </a>
+
+      <a href="{{ url_for('admin_order') }}" style="text-decoration: none; color: black;">
+        <div class="Page" id="OrdersButton">
+          <img src="{{ url_for('static', filename='admin_style/Img/Orders.png') }}">
+          <p>Заказы</p>
+        </div>
+      </a>
+
+      <a href="{{ url_for('admin_call') }}" style="text-decoration: none; color: black;">
+        <div class="Page" id="CallsButton">
+          <img src="{{ url_for('static', filename='admin_style/Img/Calls.png') }}">
+          <p>Вызовы</p>
+        </div>
+      </a>
+
+      <form method="post">
+        <button type="submit" name="AdminLogOut" value="LogOut" class="ExitBtn">Выйти</button>
+      </form>
+
+    </div>
+
+
+    <div class="Main">
+      {% block content %} {% endblock %}
+    </div>
+
+
+    <script>
+      {% block js %} {% endblock %}
+    </script>
+
+  </body>
+</html>

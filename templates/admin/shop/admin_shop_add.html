@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Добавление товара</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='admin_style/images/Icon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_shop.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+  <div class="AddForm">
+    <form method="post" enctype="multipart/form-data">
+      <input class="AddField" type="text" name="title" placeholder="Название" required>
+      <input class="AddField" type="text" name="article_number" placeholder="Артикул">
+      <input class="AddField" type="text" name="category" placeholder="Категория" required>
+      <input type="file" name="image" class="AddField" accept="image/" required>
+      <textarea name="description" placeholder="Описание"></textarea>
+      <textarea name="specifications" placeholder="Характеристики"></textarea>
+      <input class="AddField" type="number" min="0" name="price" placeholder="Цена" required>
+      <input class="AddField" type="number" min="0" name="quantity" placeholder="Количество" required>
+      <input class="AddField" type="text" name="keywords" placeholder="Ключевые слова для поиска">
+      <input type="submit" value="Сохранить" class="SaveButton">
+    </form>
+    <div style="width: 100%; height: 25px;"></div>
+  </div>
+</body>
+</html>

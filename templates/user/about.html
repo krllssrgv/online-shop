@@ -1,0 +1,504 @@
+{% extends 'user/layout.html' %}
+
+{% block pagename %}
+  О компании
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/about/about.css') }}">
+{% endblock %}
+
+
+{% block meta %}
+  <meta name="description" content="" />
+  <meta name="keywords" content="информация о компании, авионика, информация, о компании авионика"/>
+  <meta property="og:title" content="О компании 'Авионика'. Полная информация о компании."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http:// /about" />
+  <meta property="og:image" content="http:// /static/user_style/images/Logo.png"/>
+{% endblock %}
+
+
+{% block content %}
+<div class="ContData">
+    <h1>
+      <a href="https://yandex.ru/maps/-/CCUaZJcmKB" target="_blank">
+        Серпухов, Володарского, 7
+      </a>
+    </h1>
+
+    <h1>
+      <a href="tel:+79777423747">
+        +7 (977) 742-37-47
+      </a>
+    </h1>
+</div>
+
+
+<div class="Tuner">
+  <div class="TunerButton Top" onclick="Info()">Информация</div>
+  <div class="TunerButton Top" onclick="Ser()">Сервисный центр</div>
+  <div class="TunerButton" onclick="Edu()">1С обучение</div>
+  <div class="TunerButton" onclick="Prog()">1С программы</div>
+  <div class="TunerButton" onclick="Cont()">Контакты</div>
+</div>
+
+
+<div id="Information">
+  <p class="PageName">Профиль компании</p>
+  <p>
+    Компьютерный центр «Авионика» работает на Российском рынке информационных технологий с 1997 года.
+    Мы предлагаем уникальный набор сервисных услуг и решений по разработке, внедрению и сопровождению
+    корпоративных Информационных Систем (ИС), создаваемых на базе продуктов и технологий различных производителей.
+    Наш центр располагает стабильным штатом сертифицированных специалистов, а качество услуг
+    компании подтверждают статусы и сертификаты.
+  </p>
+  <p class="PageName">Мы рады предложить Вам ассортимент техники для офиса и дома:</p>
+  <ul type="none">
+    <li class="PageName">Системные блоки и мониторы.</li>
+    <li class="PageName">
+      Принтеры: у нас Вы можете купить принтер производства HP, Epson и других прославленных марок,
+      а также комплектующие к ним.
+    </li>
+    <li class="PageName">Сканеры и комплектующие к ним.</li>
+    <li class="PageName">Копиры и комплектующие к ним.</li>
+  </ul>
+  <p>
+    Компьютерный центр «Авионика» готов предложить услуги
+    по обслуживанию, ремонту компьютеров, ноутбуков и офисной
+    техники в г. Серпухове «Вызов мастера». Мы всегда рады
+    оперативно оказать Вам профессиональную компьютерную помощь,
+    звоните и оставляйте заявки на нашем сайте.
+  </p>
+  <p>
+    Оперативность одна из определяющих черт нашей команды профессионалов!
+    Оперативное реагирование — оперативная диагностика — оперативное решение.
+    Вот три составляющих нашего успеха!
+  </p>
+</div>
+
+
+<div id="Service">
+  <p class="PageName">Сервисный центр "АВИОНИКА"</p>
+  <p>
+    Мы не только продаем Вам технику: мы и обслуживаем,
+    и чиним её для Вас собственными силами. Для этого мы создали собственный сервисный центр.
+  </p>
+  <p>
+    Работе нашего сервис-центра посвящен отдельный сайт: <a href="http://printserv.su" target="_blank">printserv.su</a>. Пожалуйста, заходите
+    на него — и знакомьтесь с нашими возможностями по ремонту (в том числе гарантийному),
+    техобслуживанию и заправке картриджей.
+  </p>
+</div>
+
+
+<div id="Education">
+  <p class="PageName">Обучение 1C.</p>
+  <div style="width: 243px; margin: 10px auto;">
+    <img src="{{ url_for('static', filename='user_style/about/images/1C_Study.png') }}" alt="">
+  </div>
+  <p>
+    Работе нашего центра обучения 1С посвящен отдельный сайт:
+    <a href="http://cert1c.ru/">http://cert1c.ru/</a>.
+  </p>
+  <p>
+    Компания Авионика создана в 1997 г., и с самого момента основания мы тесно сотрудничаем с фирмой 1С: выполняем полный
+    спектр услуг по программам 1С - консультации, продажи, внедрение, сопровождение. Мы считаем, что для
+    квалифицированных специалистов работа есть всегда. Главное, получить актуальные и востребованные работодателем знания.
+    Наш центр создает возможности для успешного развития. Обучение в Центре сертифицированного обучения 1С в городе
+    Серпухов - это реальный способ повышения квалификации.
+  </p>
+  <p class="PageName">Почему нужно выбрать именно нас?</p>
+  <p>
+    На данный момент Рынок обучения 1с достаточно насыщенный. Мы профессионалы в своем деле, и готовим квалифицированных
+    специалистов, даем те знания, которые сейчас востребованы работодателями, учим только по новым конфигурациям.
+  </p>
+  <p class="PageName">Наши преимущества:</p>
+  <ol type="1">
+    <li>
+      Мы – Центр сертифицированного обучения,Информация  о нас есть  на <a href="https://1c.ru/cso-part/rus/partners/training/cso/cso-list?reg=46&city=Серпухов">
+      официальном сайте компании 1С.</a>
+    </li>
+    <li>Нас рекомендует компания «1С», что гарантирует КАЧЕСТВО обучения.</li>
+    <li>Курсы читают СЕРТИФИЦИРОВАННЫЕ преподаватели, которые совмещают преподавание с практической деятельностью в крупных компаниях.</li>
+    <li>Каждый слушатель получает бесплатный комплект методических материалов 1С.</li>
+    <li>По окончании курса КАЖДЫЙ слушатель получает официальное свидетельство фирмы «1С» единого образца.</li>
+    <li>Большой выбор режимов обучения (день/вечер/группы выходного дня/ускоренный курс).</li>
+    <li>Антикризисные цены.</li>
+    <li>Все условия для комфортного обучения: небольшие группы (3-7 человек), индивидуальное оборудованное ПК и ПО, рабочее место, проектор.</li>
+  </ol>
+  <p class="PageName">Наши курсы:</p>
+  <p class="PageName">По программе 1С: Бухгалтерия</p>
+  <ol type="1">
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=23">1С: Бухгалтерия 8. Первые шаги.</a> - <strike>7990</strike> 5990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=9">1С: Бухгалтерия 8 (углубленный курс).</a> - <strike>11990</strike> 9990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=70">Практическое освоение бухгалтерского учета с самого начала + 1С.</a> - <strike>21990</strike> 17990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=195">Оператор 1С.</a> - <strike>6990</strike> 5990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=187">Ведение учета при применении упрощенной системы налогообложения.</a> - <strike>6990</strike> 5990 руб.</li>
+  </ol>
+  <p class="PageName">По программе 1С: Управление торговлей</p>
+  <ol type="1">
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=200">Управление торговлей 8. Редакция 11.1. Первые шаги.</a> - <strike>7990</strike> 5990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=2">Управление торговлей 8. Редакция 11.1. Основные принципы работы программы.</a> - <strike>12000</strike> 9990 руб.</li>
+    <li><a href="http://www.1c.ru/rus/partners/training/cso/course.jsp?id=90">Использование прикладного решения "1С:Розница 8".</a> - <strike>9000</strike> 6990 руб.</li>
+  </ol>
+  <p class="PageName">АКЦИЯ: ПРИГЛАСИ ДРУГА – СКИДКА 10% КАЖДОМУ</p>
+  <p class="PageName">Узнать подробную информацию о курсе и расписание занятий можно по тел/WhatsApp: <a href="tel:89253031618">8(925)303-16-18</a></p>
+</div>
+
+
+<div id="Program">
+  <p class="PageName">1С-Предприятие: набор сервисных услуг</p>
+  <div class="ctop">
+      <img src="{{ url_for('static', filename='user_style/about/images/1CTop.jpg') }}">
+  </div>
+  <p>Компания Hard&Soft group работает на российском рынке информационных технологий с 1997 года.</p>
+  <p>
+    Мы предлагаем уникальный набор сервисных услуг и решений по разработке, внедрению и сопровождению
+    программ <strong>1С:Предприятие 8</strong>. Наша компания располагает стабильным штатом сертифицированных
+    специалистов, а качество услуг компании подтверждают статусы и сертификаты.
+  </p>
+  <p>
+    Наши специалисты помогут вам в приобретении, настройке, обновлении и доработки готовых и
+    специализированных конфигураций, разработанных на платформе 1С:Предприятие.
+  </p>
+  <p>
+    Система программ "1С:Предприятие" предназначена для решения широкого спектра задач автоматизации
+    учета и управления, стоящих перед динамично развивающимися современными предприятиями.
+    "1С:Предприятие" представляет собой систему прикладных решений, построенных по единым принципам и на единой
+    технологической платформе. Руководитель может выбрать решение, которое соответствует актуальным потребностям предприятия
+    и будет в дальнейшем развиваться по мере роста предприятия или расширения задач автоматизации.
+  </p>
+  <p class="PageName">Услуги автоматизации на базе 1С:Предприятие:</p>
+  <ul type="circle">
+    <li>Автоматизация финансового и управленческого учета</li>
+    <li>Разработка автоматизированных систем (АС) бюджетирования</li>
+    <li>Разработка автоматизированных систем финансового планирования</li>
+    <li>Разработка CRM- и ERP- систем</li>
+    <li>Разработка индивидуальных и специализированных систем</li>
+  </ul>
+  <p class="PageName">Этапы разработки и внедрения автоматизированных систем:</p>
+  <ul type="circle">
+    <li>Проведение детальной диагностики бизнес-процессов компании</li>
+    <li>Разработка технического задания на внедрение АС</li>
+    <li>Внедрение АС</li>
+    <li>Сопровождение АС</li>
+  </ul>
+  <p class="PageName">Основные поставки 1С:Предприятие 8</p>
+
+  <p class="PageName">1С:Бухгалтерия предприятия 8</p>
+  <div class="ctop">
+      <img src="{{ url_for('static', filename='user_style/about/images/1Cn1.jpg') }}">
+  </div>
+  <p><strong>1С:Бухгалтерия предприятия Базовая - 5 400 руб.</strong></p>
+  <p><strong>1С:Бухгалтерия предприятия 8 ПРОФ - 13 000 руб.</strong></p>
+  <p><strong>(+ 3 мес. ИТС)</strong></p>
+  <p>
+  Конфигурация 1С Бухгалтерия 8 предназначена для автоматизации бухгалтерского и налогового учета, включая
+  подготовку обязательной (регламентированной) отчетности, в организациях, осуществляющих любые виды
+  коммерческой деятельности: оптовую и розничную торговлю; комиссионную торговлю (включая субкомиссию);
+  оказание услуг; производство и т.д.
+  </p>
+  <p>
+    В соответствии с действующим законодательством Российской Федерации в 1с бухгалтерия 8 реализован бухгалтерский
+    и налоговый учет. «1С Бухгалтерия 8» обеспечивает решение всех задач, стоящих перед бухгалтерской службой предприятия,
+    если бухгалтерская служба полностью отвечает за учет нa предприятии, включая, например, выписку первичных дoкументoв,
+    учет продаж и т.д. Кроме того, информацию об отдельных видах деятельности, торговых и производственных операциях,
+    могут вводить сотрудники смежных служб предприятия, не являющиеся бухгалтерами.
+  </p>
+  <p>
+    Прикладное решение «1С Бухгалтерия 8» используется только для ведения бухгалтерского и налогового учета. Для решения
+    задач автоматизации других служб, например, отдела продаж, можно использовать специализированные конфигурации или
+    другие системы.
+  </p>
+  <p>
+    Совместное использование с прикладными решениями <strong>"1C Управление торговлей"</strong> и
+    <strong>"1C Зарплата и Управление Персоналом"</strong>, созданными нa платформе
+    <strong>"1С Предприятие 8"</strong> заложены в «1С Бухгалтерию.
+  </p>
+  <p>Подробнее и программе: <a href="http://v8.1c.ru/buhv8/">http://v8.1c.ru/buhv8/</a></p>
+  <p>
+    Сравнение версий 1С:Бухгалтерии 8 на сайте 1С:
+    <a href="http://v8.1c.ru/buhv8/323.htm">http://v8.1c.ru/buhv8/323.htm</a>
+  </p>
+
+  <p class="PageName">1С:Зарплата и управление персоналом 8</p>
+  <div class="ctop">
+      <img src="{{ url_for('static', filename='user_style/about/images/1Cn2.jpg') }}">
+  </div>
+  <p><strong>1С:Зарплата и Управление Персоналом 8. Базовая - 7 400 руб.</strong></p>
+  <p><strong>1С:Зарплата и Управление Персоналом 8 - 22 600 руб.</strong></p>
+  <p><strong>(+ 3 мес. ИТС)</strong></p>
+  <p>
+    В <strong>1С:Зарплата и управление персоналом 8</strong> поддерживаются все основные процессы управления персоналом,
+    а также процессы кадрового учета, расчета зарплаты, исчисления налогов, формирования отчетов и справок в государственные
+    органы и социальные фонды, планирование расходов на оплату труда. Учтены требования законодательства, реальная практика
+    работы предприятий и перспективные мировые тенденции развития подходов к управлению персоналом.
+  </p>
+  <p>
+    Решения <strong>1С:Зарплата и управление персоналом 8</strong> соответствуют требованиям Федерального закона от
+    27.07.2006 № 152-ФЗ "О защите персональных данных". В программе реализована возможность регистрации событий,
+    связанных с работой с персональными данными, в частности, доступ и отказ в доступе к персональным данным, включая
+    информацию о том пользователе, с которым данное событие было связано.Удобные и гибкие механизмы настройки отчетов
+    позволяют получать полную и достоверную информацию в самых различных аналитических разрезах для различных категорий
+    пользователей: руководства, службы управления персоналом, кадровой службы и других.
+  </p>
+  <p class="PageName">Подробнее о программе: <a href="http://v8.1c.ru/hrm/">http://v8.1c.ru/hrm/</a></p>
+
+  <p class="PageName">1С:Упрощенка 8</p>
+  <div class="ctop"><img src="{{ url_for('static', filename='user_style/about/images/1Cn3.jpg') }}"></div>
+  <p><strong>1С:Упрощенка 8 - 5 400 руб.</strong></p>
+  <p>
+    <strong>"1С:Упрощенка 8"</strong> предназначена организациям и индивидуальным предпринимателям, переведенным
+    на упрощенную систему налогообложения (УСН) в соответствии с главой 26.2 Налогового кодекса РФ. Программа
+    позволяет автоматизировать бухгалтерский и налоговый учет и подготовку регламентированной отчетности на небольших
+    предприятиях, где с программой работает один бухгалтер.
+  </p>
+  <p>
+    <strong>"1С:Упрощенка 8"</strong> является специализированной поставкой программы
+    <a href="http://v8.1c.ru/buhv8/324.htm"><strong>"1С:Бухгалтерия 8. Базовая версия"</strong></a>, которая
+    предварительно настроена для <a href="http://v8.1c.ru/buhv8/321.htm#usn">ведения учета по УСН</a>.
+  </p>
+  <p>
+     Налоговый учет в <strong>"1С:Упрощенке 8"</strong>, как и в <strong>"1С:Бухгалтерии 8"</strong>, ведется
+    автоматически – записи "Книги учета доходов и расходов" формируются программой при регистрации первичных
+    документов и выполнении регламентных операций. "1С:Упрощенка 8" позволяет решать все задачи, стоящие перед
+    бухгалтерской службой предприятия, включая, например, выписку первичных документов, учет продаж и т.д.
+    Кроме того, информацию об отдельных видах деятельности, торговых и производственных операциях, могут
+    вводить сотрудники смежных служб предприятия, не являющиеся бухгалтерами. В этом случае за бухгалтерской
+    службой остается методическое руководство и контроль за настройками информационной базы, обеспечивающими
+    автоматическое отражение документов в бухгалтерском и налоговом учете.
+  </p>
+  <p class="PageName">Подробнее о программе: <a href="http://v8.1c.ru/hrm/">http://v8.1c.ru/hrm/</a></p>
+
+  <p class="PageName">1С Управление торговлей</p>
+  <div class="ctop">
+    <img src="{{ url_for('static', filename='user_style/about/images/1Cn4.jpg') }}">
+  </div>
+  <p><strong>1С:Управление торговлей 8. Базовая версия - 7 200 руб.</strong></p>
+  <p><strong>1С: Управление торговлей 8. - 22 600 руб.</strong></p>
+  <p>
+    <strong>"1С:Управление торговлей 8"</strong> — это современный инструмент для повышения эффективности бизнеса
+    торгового предприятия.
+  </p>
+  <p>
+    <strong>"1С:Управление торговлей 8"</strong> позволяет в комплексе автоматизировать задачи оперативного и
+    управленческого учета, анализа и планирования торговых операций, обеспечивая тем самым эффективное управление
+    современным торговым предприятием.
+  </p>
+  <p>
+    Предметная область, автоматизируемая с помощью <strong>"1С:Управление торговлей 8"</strong>, может быть представлена
+    в виде следующей схемы.
+  </p>
+  <p>"1С:Управление торговлей 8" автоматизирует следующие направления хозяйственной деятельности:</p>
+  <ul type="circle">
+    <li><a href="http://v8.1c.ru/trade/crm/index.htm">управление отношениями с клиентами</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/rulesale/index.htm">управление правилами продаж</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/clients/index.htm">управление процессами продаж</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/salereps/index.htm">управление торговыми представителями</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/purchase/index.htm">управление запасами</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/vendors/index.htm">управление закупками</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/warehous/index.htm">управление складом</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/finances/index.htm">управление финансами</a>, </li>
+    <li><a href="http://v8.1c.ru/trade/control/index.htm">контроль и анализ целевых показателей деятельности предприятия</a>. </li>
+  </ul>
+  <p>
+    В программе могут регистрироваться как уже совершенные, так и еще только планируемые хозяйственные операции.
+    <strong>"1С:Управление торговлей 8"</strong> автоматизирует оформление практически всех первичных документов
+    торгового и складского учета, а также документов движения денежных средств.
+  </p>
+  <p>
+    <strong>"1С:Управление торговлей 8"</strong> рассчитана на любые виды торговых операций. Реализованы функции учета
+    – от ведения справочников и ввода первичных документов до получения различных аналитических отчетов.
+  </p>
+  <p>
+    Решение позволяет вести управленческий учет по торговому предприятию в целом. Для предприятия холдинговой
+    структуры документы могут оформляться от имени нескольких организаций, входящих в холдинг. "1С:Управление торговлей 8" — это готовое решение, в основе которого лежит мощная технологическая платформа нового поколения "1С:Предприятие 8".</p>
+  <p class="PageName">Подробнее и программе: <a href="http://v8.1c.ru/trade/">http://v8.1c.ru/trade/</a></p>
+
+</div>
+
+
+<div id="Contacts">
+  <p class="PageName">Юридическая информация</p>
+  <ul type="none">
+    <li>ИП САВИН СЕРГЕЙ ВЛАДИМИРОВИЧ</li>
+    <li>Банковские реквизиты:</li>
+    <li>Р/с40802810200000106891</li>
+    <li>в Филиале "Центральный" Банка ВТБ (ПАО) в Г.МОСКВЕ</li>
+    <li>к/с 30101810145250000411</li>
+    <li>БИК 044525411</li>
+    <li>ИНН 504300147206</li>
+    <li>ОГРН 308504306500022</li>
+    <li>ОКВЭД 52.48.1</li>
+    <li>ОКПО 0118150227</li>
+  </ul>
+  <p class="PageName">Юридический адрес:</p>
+  <ul type="none">
+    <li>142211, Московская область, г. Серпухов, ул. Володарского, д. 7</li>
+    <li>НДС не облагается (применение патентной системы налогообложения, п. 11 ст. 346.43 НК РФ)</li>
+  </ul>
+  <p class="PageName">Почтовый адрес:</p>
+  <ul type="none">
+    <li>Московская область, Серпухов, 142211 ул. Володарского д.7</li>
+  </ul>
+  <p class="PageName">E-Mail:<a href="mailto:sc@hsgroup.ru">sc@hsgroup.ru</a></p>
+</div>
+
+
+{% endblock %}
+
+
+{% block js %}
+function Info() {
+    var Info = document.getElementById("Information");
+    var Ser = document.getElementById("Service");
+    var Edu = document.getElementById("Education");
+    var Prog = document.getElementById("Program");
+    var Cont = document.getElementById("Contacts");
+
+    Info.style.visibility = "visible";
+    Info.style.display = "block";
+    Info.style.fontSize = "16px";
+
+
+    Ser.style.visibility = "hidden";
+    Ser.style.display = "none";
+    Ser.style.fontSize = "0px";
+
+    Edu.style.visibility = "hidden";
+    Edu.style.display = "none";
+    Edu.style.fontSize = "0px";
+
+    Prog.style.visibility = "hidden";
+    Prog.style.display = "none";
+    Prog.style.fontSize = "0px";
+
+    Cont.style.visibility = "hidden";
+    Cont.style.display = "none";
+    Cont.style.fontSize = "0px";
+  }
+
+
+function Ser() {
+    var Info = document.getElementById("Information");
+    var Ser = document.getElementById("Service");
+    var Edu = document.getElementById("Education");
+    var Prog = document.getElementById("Program");
+    var Cont = document.getElementById("Contacts");
+
+    Info.style.visibility = "hidden";
+    Info.style.display = "none";
+    Info.style.fontSize = "0px";
+
+
+    Ser.style.visibility = "visible";
+    Ser.style.display = "block";
+    Ser.style.fontSize = "16px";
+
+
+    Edu.style.visibility = "hidden";
+    Edu.style.display = "none";
+    Edu.style.fontSize = "0px";
+
+    Prog.style.visibility = "hidden";
+    Prog.style.display = "none";
+    Prog.style.fontSize = "0px";
+
+    Cont.style.visibility = "hidden";
+    Cont.style.display = "none";
+    Cont.style.fontSize = "0px";
+  }
+
+
+function Edu() {
+    var Info = document.getElementById("Information");
+    var Ser = document.getElementById("Service");
+    var Edu = document.getElementById("Education");
+    var Prog = document.getElementById("Program");
+    var Cont = document.getElementById("Contacts");
+
+    Info.style.visibility = "hidden";
+    Info.style.display = "none";
+    Info.style.fontSize = "0px";
+
+    Ser.style.visibility = "hidden";
+    Ser.style.display = "none";
+    Ser.style.fontSize = "0px";
+
+
+    Edu.style.visibility = "visible";
+    Edu.style.display = "block";
+    Edu.style.fontSize = "16px";
+
+
+    Prog.style.visibility = "hidden";
+    Prog.style.display = "none";
+    Prog.style.fontSize = "0px";
+
+    Cont.style.visibility = "hidden";
+    Cont.style.display = "none";
+    Cont.style.fontSize = "0px";
+  }
+
+
+function Prog() {
+    var Info = document.getElementById("Information");
+    var Ser = document.getElementById("Service");
+    var Edu = document.getElementById("Education");
+    var Prog = document.getElementById("Program");
+    var Cont = document.getElementById("Contacts");
+
+    Info.style.visibility = "hidden";
+    Info.style.display = "none";
+    Info.style.fontSize = "0px";
+
+    Ser.style.visibility = "hidden";
+    Ser.style.display = "none";
+    Ser.style.fontSize = "0px";
+
+    Edu.style.visibility = "hidden";
+    Edu.style.display = "none";
+    Edu.style.fontSize = "16px";
+
+
+    Prog.style.visibility = "visible";
+    Prog.style.display = "block";
+    Prog.style.fontSize = "16px";
+
+
+    Cont.style.visibility = "hidden";
+    Cont.style.display = "none";
+    Cont.style.fontSize = "0px";
+  }
+
+
+function Cont() {
+    var Info = document.getElementById("Information");
+    var Ser = document.getElementById("Service");
+    var Edu = document.getElementById("Education");
+    var Prog = document.getElementById("Program");
+    var Cont = document.getElementById("Contacts");
+
+    Info.style.visibility = "hidden";
+    Info.style.display = "none";
+    Info.style.fontSize = "0px";
+
+    Ser.style.visibility = "hidden";
+    Ser.style.display = "none";
+    Ser.style.fontSize = "0px";
+
+    Edu.style.visibility = "hidden";
+    Edu.style.display = "none";
+    Edu.style.fontSize = "0px";
+
+    Prog.style.visibility = "hidden";
+    Prog.style.display = "none";
+    Prog.style.fontSize = "0px";
+
+
+    Cont.style.visibility = "visible";
+    Cont.style.display = "block";
+    Cont.style.fontSize = "16px";
+  }
+{% endblock %}

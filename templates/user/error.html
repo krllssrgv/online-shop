@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Страница не существует</title>
+
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='user_style/images/Icon.png') }}" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <style>
+      .Warn{
+        font-family: 'Source Sans Pro', sans-serif;
+        width: 80%;
+        min-width: 180px;
+        max-width: 600px;
+        height: auto;
+        min-height: 100px;
+        border-radius: 10px;
+        border: 3px solid #0997de;
+        margin: 150px auto;
+        text-align: center;
+      }
+
+      .Text{
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 500px) {
+      .Text{
+        font-size: 24px;
+      }}
+
+      @media (max-width: 499px) and (min-width: 300px){
+      .Text{
+        font-size: 12px;
+      }}
+
+      @media (max-width: 299px){
+      .Text{
+        font-size: 10px;
+      }}
+
+      a{
+        color: black;
+        text-decoration: none;
+      }
+
+      .Back{
+        width: 116px;
+        height: 46px;
+        border: 2px solid #0997de;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 18px;
+        margin: 20px auto 0 auto;
+        background-color: #0997de;
+      }
+
+      .Back:hover{
+        border: 2px solid black;
+      }
+
+      .Foot{
+        width: 100%;
+        height: 20px;
+      }
+    </style>
+
+</head>
+
+<body>
+  <div class="Warn">
+    <div class="Text"><h1>Такой страницы не существует</h1></div>
+    <a href="{{ url_for('home') }}"><div class="Back">Вернуться на главную</div></a>
+    <div class="Foot"></div>
+  </div>
+</body>
+</html>

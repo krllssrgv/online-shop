@@ -1,0 +1,260 @@
+{% extends 'admin/admin_layout.html' %}
+
+{% block pagename %}
+  Заказы
+{% endblock %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_order.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="TypeTuner">
+  <div id="TunerNews" class="Tuner TTop" onclick="News()">Новые: {{ counter.new }}</div>
+  <div id="TunerProcess" class="Tuner" onclick="Process()">Обрабатываемые: {{ counter.process }}</div>
+  <div id="TunerComplete" class="Tuner" onclick="Complete()">Завершенные: {{ counter.complete }}</div>
+  <div id="TunerCancel" class="Tuner TBottom" onclick="Cancel()">Отмененные: {{ counter.cancel }}</div>
+</div>
+
+<div id="News">
+  {% for i in orders %}
+  {% if i.status == 'Не рассмотрен' %}
+  <a href="{{ url_for('admin_certain_order', id=i.id) }}" class="DetailsLink">
+    <div class="OrderInfo">
+      <div>Заказ №{{ i.id }}</div>
+      <div>Клиент: {{ i.surname }} {{ i.name }} {{ i.middle_name }}</div>
+      <div>Дата: {{ i.data }}</div>
+      <div>Стоимость: {{ i.price }}₽</div>
+      <div>Статус: {{ i.status }}</div>
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+<div id="Process">
+  {% for i in orders %}
+  {% if i.status == 'В обработке' %}
+  <a href="{{ url_for('admin_certain_order', id=i.id) }}" class="DetailsLink">
+    <div class="OrderInfo">
+      <div>Заказ №{{ i.id }}</div>
+      <div>Клиент: {{ i.surname }} {{ i.name }} {{ i.middle_name }}</div>
+      <div>Дата: {{ i.data }}</div>
+      <div>Стоимость: {{ i.price }}₽</div>
+      <div>Способ получения: {{ i.type_of_delivery }}</div>
+      <div>Статус: {{ i.status }}</div>
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+<div id="Complete">
+  {% for i in orders %}
+  {% if i.status == 'Завершен' %}
+  <a href="{{ url_for('admin_certain_order', id=i.id) }}" class="DetailsLink">
+    <div class="OrderInfo">
+      <div>Заказ №{{ i.id }}</div>
+      <div>Клиент: {{ i.surname }} {{ i.name }} {{ i.middle_name }}</div>
+      <div>Дата: {{ i.data }}</div>
+      <div>Стоимость: {{ i.price }}₽</div>
+      <div>Способ получения: {{ i.type_of_delivery }}</div>
+      <div>Статус: {{ i.status }}</div>
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+<div id="Cancel">
+  {% for i in orders %}
+  {% if i.status == 'Отменен' %}
+  <a href="{{ url_for('admin_certain_order', id=i.id) }}" class="DetailsLink">
+    <div class="OrderInfo">
+      <div>Заказ №{{ i.id }}</div>
+      <div>Клиент: {{ i.surname }} {{ i.name }} {{ i.middle_name }}</div>
+      <div>Дата: {{ i.data }}</div>
+      <div>Стоимость: {{ i.price }}₽</div>
+      <div>Способ получения: {{ i.type_of_delivery }}</div>
+      <div>Статус: {{ i.status }}</div>
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}
+
+
+{% block js %}
+function News() {
+    var News = document.getElementById("News");
+    var Process = document.getElementById("Process");
+    var Complete = document.getElementById("Complete");
+    var Cancel = document.getElementById("Cancel");
+
+    var TunerActive = document.getElementById("TunerNews");
+    var Tuner1 = document.getElementById("TunerProcess");
+    var Tuner2 = document.getElementById("TunerComplete");
+    var Tuner3 = document.getElementById("TunerCancel");
+
+    News.style.visibility = "visible";
+    News.style.display = "block";
+    News.style.fontSize = "14px";
+
+    Process.style.visibility = "hidden";
+    Process.style.display = "none";
+    Process.style.fontSize = "0px";
+
+    Complete.style.visibility = "hidden";
+    Complete.style.display = "none";
+    Complete.style.fontSize = "0px";
+
+    Cancel.style.visibility = "hidden";
+    Cancel.style.display = "none";
+    Cancel.style.fontSize = "0px";
+
+    TunerActive.style.background = "black";
+    TunerActive.style.color = "white";
+
+    Tuner1.style.background = "none";
+    Tuner1.style.color = "black";
+
+    Tuner2.style.background = "none";
+    Tuner2.style.color = "black";
+
+    Tuner3.style.background = "none";
+    Tuner3.style.color = "black";
+  }
+
+
+function Process() {
+    var News = document.getElementById("News");
+    var Process = document.getElementById("Process");
+    var Complete = document.getElementById("Complete");
+    var Cancel = document.getElementById("Cancel");
+    var TunerActive = document.getElementById("TunerProcess");
+
+    var Tuner1 = document.getElementById("TunerNews");
+    var TunerActive = document.getElementById("TunerProcess");
+    var Tuner2 = document.getElementById("TunerComplete");
+    var Tuner3 = document.getElementById("TunerCancel");
+
+    News.style.visibility = "hidden";
+    News.style.display = "none";
+    News.style.fontSize = "0px";
+
+    Process.style.visibility = "visible";
+    Process.style.display = "block";
+    Process.style.fontSize = "14px";
+
+    Complete.style.visibility = "hidden";
+    Complete.style.display = "none";
+    Complete.style.fontSize = "0px";
+
+    Cancel.style.visibility = "hidden";
+    Cancel.style.display = "none";
+    Cancel.style.fontSize = "0px";
+
+    Tuner1.style.background = "none";
+    Tuner1.style.color = "black";
+
+    TunerActive.style.background = "black";
+    TunerActive.style.color = "white";
+
+    Tuner2.style.background = "none";
+    Tuner2.style.color = "black";
+
+    Tuner3.style.background = "none";
+    Tuner3.style.color = "black";
+  }
+
+
+function Complete() {
+    var News = document.getElementById("News");
+    var Process = document.getElementById("Process");
+    var Complete = document.getElementById("Complete");
+    var Cancel = document.getElementById("Cancel");
+    var TunerActive = document.getElementById("TunerComplete");
+
+    var Tuner1 = document.getElementById("TunerNews");
+    var Tuner2 = document.getElementById("TunerProcess");
+    var TunerActive = document.getElementById("TunerComplete");
+    var Tuner3 = document.getElementById("TunerCancel");
+
+    News.style.visibility = "hidden";
+    News.style.display = "none";
+    News.style.fontSize = "0px";
+
+    Process.style.visibility = "hidden";
+    Process.style.display = "none";
+    Process.style.fontSize = "0px";
+
+    Complete.style.visibility = "visible";
+    Complete.style.display = "block";
+    Complete.style.fontSize = "14px";
+
+    Cancel.style.visibility = "hidden";
+    Cancel.style.display = "none";
+    Cancel.style.fontSize = "0px";
+
+    Tuner1.style.background = "none";
+    Tuner1.style.color = "black";
+
+    Tuner2.style.background = "none";
+    Tuner2.style.color = "black";
+
+    TunerActive.style.background = "black";
+    TunerActive.style.color = "white";
+
+    Tuner3.style.background = "none";
+    Tuner3.style.color = "black";
+  }
+
+
+function Cancel() {
+    var News = document.getElementById("News");
+    var Process = document.getElementById("Process");
+    var Complete = document.getElementById("Complete");
+    var Cancel = document.getElementById("Cancel");
+    var TunerActive = document.getElementById("TunerCancel");
+
+    var Tuner1 = document.getElementById("TunerNews");
+    var Tuner2 = document.getElementById("TunerProcess");
+    var Tuner3 = document.getElementById("TunerComplete");
+    var TunerActive = document.getElementById("TunerCancel");
+
+    News.style.visibility = "hidden";
+    News.style.display = "none";
+    News.style.fontSize = "0px";
+
+    Process.style.visibility = "hidden";
+    Process.style.display = "none";
+    Process.style.fontSize = "0px";
+
+    Complete.style.visibility = "hidden";
+    Complete.style.display = "none";
+    Complete.style.fontSize = "0px";
+
+    Cancel.style.visibility = "visible";
+    Cancel.style.display = "block";
+    Cancel.style.fontSize = "14px";
+
+    Tuner1.style.background = "none";
+    Tuner1.style.color = "black";
+
+    Tuner2.style.background = "none";
+    Tuner2.style.color = "black";
+
+    Tuner3.style.background = "none";
+    Tuner3.style.color = "black";
+
+    TunerActive.style.backgroundColor = "black";
+    TunerActive.style.color = "white";
+  }
+{% endblock %}

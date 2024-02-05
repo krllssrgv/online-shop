@@ -1,0 +1,43 @@
+{% extends 'user/layout.html' %}
+
+{% block pagename %}
+  Интернет-магазин
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/shop/order.css') }}">
+{% endblock %}
+
+
+{% block content %}
+  <div class="OrderProd">
+    <div class="ProdImg"><img src="../../static/img/{{ product.image }}" alt=""></div>
+    <div class="ProdName">{{ product.title }}</div>
+    <div class="ProdPrice">Цена: {{ product.price }}₽</div>
+  </div>
+
+  <div class="OrderCont">
+    <form method="post">
+      <p>Имя</p>
+      <input class="OrderField" type="text" name="name" placeholder="Имя" required>
+      <p>Фамилия</p>
+      <input class="OrderField" type="text" name="surname" placeholder="Фамилия" required>
+      <p>Отчество</p>
+      <input class="OrderField" type="text" name="middle_name" placeholder="Отчество" required>
+      <p>Номер телефона</p>
+      <input class="OrderField" type="text" name="phone" placeholder="Номер телефона" required>
+      <p>Электронная почта</p>
+      <input class="OrderField" type="text" name="e_mail" placeholder="Электронная почта" required>
+      <p>Способ получения</p>
+      <select size="1" name="type_of_delivery">
+        <option value="Самовывоз">Самовывоз</option>
+        <option value="Доставка">Доставка</option>
+      </select>
+      <input class="OrderField" type="text" name="address" placeholder="Адрес(при выборе 'Доставка')">
+      <p>Количество товара</p>
+      <input class="OrderField" type="number" name="quantity" placeholder="В наличии {{ product.quantity }}шт." max="{{ product.quantity }}" min="1" required>
+      <input type="submit" value="Подтвердить" class="ConfirmButton">
+    </form>
+  </div>
+{% endblock %}
+

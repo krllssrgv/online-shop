@@ -1,0 +1,57 @@
+{% extends 'user/layout.html' %}
+
+{% block pagename %}
+  Интернет-магазин
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/shop/shop.css') }}">
+{% endblock %}
+
+
+{% block meta %}
+  <meta name="description" content="" />
+  <meta name="keywords" content="авионика интернет-магазин, интернет магазин компьютерной техники, магазин компьютеров и оргтехники,
+  онлайн-магазин авионика"/>
+  <meta property="og:title" content="Интернет-магазин 'Авионика'. Товары в наличии, низкие цены, сделайте заказ прямо сейчас! Самовывоз и доставка."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http:// /shop" />
+  <meta property="og:image" content="http:// /static/user_style/images/Logo.png"/>
+{% endblock %}
+
+
+{% block content %}
+  <div class="CategoryCont">
+    <ul>
+    {% for x in categories %}
+      <li><a href="{{ url_for('shop_category', category = x) }}">{{ x }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="ProductContainer">
+    {% for i in product %}
+    {% if i.quantity > 0 %}
+      <a href="{{ url_for('product', id=i.id) }}" class="PLink">
+        <div class="Product">
+          <div class="PImg"><img src="{{ url_for('static', filename='img/' + i.image) }}"></div>
+          <div class="PDesc">
+            <p class="PageName">{{ i.title }}</p>
+            <p>{{ i.description }}</p>
+            <p>Цена: {{ i.price }}₽</p>
+          </div>
+          <a href="{{ url_for('buy_product', id=i.id) }}" class="PLink" >
+            <div class="BuyButton">Купить</div>
+          </a>
+        </div>
+      </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
+
+{% block js %}
+
+{% endblock %}

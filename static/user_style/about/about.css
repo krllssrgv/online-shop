@@ -1,0 +1,227 @@
+#Service {
+  visibility: hidden;
+  display: none;
+}
+
+#Education {
+  visibility: hidden;
+  display: none;
+}
+
+#Program {
+  visibility: hidden;
+  display: none;
+}
+
+#Contacts {
+  visibility: hidden;
+  display: none;
+}
+
+
+ul{
+  padding: 0;
+}
+
+
+@media (min-width: 721px) {
+.ContData{
+  width: 250px;
+  height: 70px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #0997de;
+}
+
+
+.ContData h1{
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+
+.ContData a {
+  color: #0997de;
+  text-decoration: none;
+}
+
+
+.Tuner {
+  height: 40px;
+  width: 96%;
+  margin: 30px auto;
+  border-radius: 15px;
+  background-color: #FF3700;
+}
+
+
+.TunerButton {
+  height: 100%;
+  width: 20%;
+  float: left;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  color: white;
+}
+
+
+.TunerButton:hover {
+  animation: turner 0.4s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+.ctop {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+
+.ctop img{
+  height: 200px;
+  width: 200px;
+}
+}
+
+
+@media (max-width: 720px) and (min-width: 391px) {
+.ContData{
+  width: 70%;
+  height: auto;
+  margin: 10px auto 30px auto;
+  text-align: center;
+  border-radius: 8px;
+  border: 3px solid #0997de;
+}
+
+
+.ContData h1{
+  margin: 8px 3px;
+  font-size: 15px;
+}
+
+
+.ContData a {
+  color: #0997de;
+  text-decoration: none;
+}
+
+
+.Tuner {
+  width: 96%;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #FF3700;
+  height: 40px;
+}
+
+
+.TunerButton {
+  height: 50%;
+  width: 33.33%;
+  float: left;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+}
+
+
+.Top {
+  width: 50%;
+}
+
+
+.TunerButton:hover {
+  animation: turner 0.4s linear 1;
+}
+
+
+.ctop {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+
+.ctop img{
+  height: 200px;
+  width: 200px;
+}
+}
+
+
+@media (max-width: 390px) {
+.ContData{
+  width: 76%;
+  height: auto;
+  margin: 10px auto 30px auto;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #0997de;
+}
+
+
+.ContData h1{
+  margin: 6px 2px;
+  font-size: 13px;
+}
+
+
+.ContData a {
+  color: #0997de;
+  text-decoration: none;
+}
+
+
+.Tuner {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: #FF3700;
+  height: 90px;
+}
+
+
+.TunerButton {
+  height: 16px;
+  width: 100%;
+  float: left;
+  border-radius: 5px;
+  margin: 1px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+
+
+.TunerButton:hover {
+  animation: turner 0.4s linear 1;
+}
+
+
+.ctop {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+
+.ctop img{
+  height: 100px;
+  width: 100px;
+}
+}
+
+
+
+@keyframes turner {
+  0% {background-color: #FF3700;}
+  100% {background-color: black;}
+}

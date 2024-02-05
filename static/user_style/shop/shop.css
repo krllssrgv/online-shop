@@ -1,0 +1,160 @@
+.ProductContainer{
+  width: 100%;
+  height: auto;
+}
+
+
+.PLink{
+  text-decoration: none;
+  color: black;
+}
+
+
+@media (min-width: 721px) {
+.CategoryCont{
+  width: 600px;
+  height: auto;
+  margin: 0 auto 40px auto;
+  padding: 10px;
+  background-color: #333333;
+  border-radius: 8px;
+}
+
+
+.CategoryCont a{
+  font-size: 14px;
+  color: white;
+}
+
+
+.Product{
+  width: 556px;
+  height: 176px;
+  border: 2px solid #0997de;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+
+.PImg{
+  height: 160px;
+  width: 160px;
+  margin: 8px;
+  float: left;
+  text-align: center;
+}
+
+
+.PImg img{
+  max-width: 160px;
+  max-height: 160px;
+}
+
+
+.PDesc{
+  width: calc(100% - 176px);
+  height: 140px;
+  float: left;
+}
+
+
+.PDesc p{
+  margin: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+
+.BuyButton{
+  width: 68px;
+  height: 28px;
+  float: left;
+  margin-left: 10px;
+  background-color: yellow;
+  position: relative;
+  bottom: 0px;
+  border: 1px solid yellow;
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+
+.BuyButton:hover{
+  border: 1px solid black;
+}
+}
+
+
+
+@media (max-width: 720px) {
+.CategoryCont{
+  width:  80%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  padding: 6px;
+  background-color: #333333;
+  border-radius: 5px;
+}
+
+
+.CategoryCont a{
+  font-size: 12px;
+  color: white;
+}
+
+
+.Product{
+  width: calc(80%-4px);
+  border: 2px solid #0997de;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+
+.PImg{
+  height: 140px;
+  width: 140px;
+  margin: 4px auto;
+  text-align: center;
+}
+
+
+.PImg img{
+  max-width: 140px;
+  max-height: 140px;
+}
+
+
+.PDesc{
+  width: 96%;
+  margin: 2px auto;
+  min-height: 50px;
+}
+
+
+.PDesc p{
+  margin: 3px;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+.BuyButton{
+  width: 60px;
+  height: 20px;
+  margin: 6px auto;
+  background-color: yellow;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+.BuyButton:hover{
+  width: 58px;
+  height: 18px;
+  border: 1px solid black;
+  line-height: 18px;
+}
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Авионика - {% block pagename %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/layout.css') }}">
+  {% block styles %} {% endblock %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='user_style/images/Icon.png') }}" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  {% block meta %} {% endblock %}
+
+</head>
+
+<body>
+<div id="wrapper">
+  <a href="tel:+79777423747">
+    <div class="ToCall">
+      <img src="{{ url_for('static', filename='user_style/images/Phone.png') }}" alt="">
+    </div>
+  </a>
+
+
+  <div id="CallWindow">
+    <a href="tel:+79777423747" class="ContactLink"><p>+7(977) 742-37-47</p></a>
+    <div class="CloseBtn" onclick="Close()">Закрыть</div>
+  </div>
+
+
+  <div id="MapWindow">
+    <a href="https://yandex.ru/maps/-/CCUaZJcmKB" class="ContactLink"><p>Серпухов, Володарского, 7</p></a>
+    <div class="CloseBtn" onclick="Close()">Закрыть</div>
+  </div>
+
+
+  <header> <!-- Шапка -->
+    <div class="Logo">
+      <img src="{{ url_for('static', filename='user_style/images/Logo.png') }}">
+    </div>
+
+    <div class="Specs">
+      <div class="Buttons">
+        <a href="{{ url_for('home') }}"><div class="Button LeftBtn"><img src="{{ url_for('static', filename='user_style/images/Main.png') }}" class="ButtonImg"><p>Главная</p></div></a>
+        <a href="{{ url_for('shop') }}"><div class="Button"><img src="{{ url_for('static', filename='user_style/images/Shop.png') }}" class="ButtonImg"><p>Магазин</p></div></a>
+        <a href="{{ url_for('call') }}"><div class="Button"><img src="{{ url_for('static', filename='user_style/images/Call.png') }}" class="ButtonImg"><p>Вызов мастера</p></div></a>
+        <a href="{{ url_for('about') }}"><div class="Button RightBtn"><img src="{{ url_for('static', filename='user_style/images/Info.png') }}" class="ButtonImg"><p>О компании</p></div></a>
+      </div>
+
+
+      <div class="CBtn" onclick="CallWindowOpen()">
+        <img src="{{ url_for('static', filename='user_style/images/Phone2.png') }}" alt="">
+      </div>
+
+      <div class="CBtn" onclick="MapWindowOpen()">
+        <img src="{{ url_for('static', filename='user_style/images/Map.png') }}" alt="">
+      </div>
+
+    </div>
+  </header>
+
+
+  <main> <!-- Основная часть -->
+    {% block content %}
+
+    {% endblock %}
+  </main>
+
+  <footer>
+    <div class="FootLeft"> </div>
+    <div class="FootText">© 1997-2021. Компьютерный центр «Авионика».</div>
+    <a href="{{ url_for('about') }}"><div class="FootRight"><img src="{{ url_for('static', filename='user_style/images/Info.png') }}" alt=""></div></a>
+  </footer>
+
+</div>
+
+<script>
+  {% block js %}
+  {% endblock %}
+
+  function CallWindowOpen() {
+    var CallWindow = document.getElementById("CallWindow")
+    var MapWindow = document.getElementById("MapWindow")
+
+    CallWindow.style.visibility = "visible";
+    CallWindow.style.display = "block";
+    CallWindow.style.fontSize = "16px";
+
+    MapWindow.style.visibility = "hidden";
+    MapWindow.style.display = "none";
+    MapWindow.style.fontSize = "0px";
+  }
+
+  function MapWindowOpen() {
+    var CallWindow = document.getElementById("CallWindow")
+    var MapWindow = document.getElementById("MapWindow")
+
+    CallWindow.style.visibility = "hidden";
+    CallWindow.style.display = "none";
+    CallWindow.style.fontSize = "0px";
+
+    MapWindow.style.visibility = "visible";
+    MapWindow.style.display = "block";
+    MapWindow.style.fontSize = "16px";
+  }
+
+  function Close(){
+    var CallWindow = document.getElementById("CallWindow")
+    var MapWindow = document.getElementById("MapWindow")
+
+    CallWindow.style.visibility = "hidden";
+    CallWindow.style.display = "none";
+    CallWindow.style.fontSize = "0px";
+
+    MapWindow.style.visibility = "hidden";
+    MapWindow.style.display = "none";
+    MapWindow.style.fontSize = "0px";
+  }
+</script>
+
+</body>
+</html>

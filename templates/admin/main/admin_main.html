@@ -1,0 +1,32 @@
+{% extends 'admin/admin_layout.html' %}
+
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_main.css') }}">
+{% endblock %}
+
+
+{% block pagename %}
+  Главная
+{% endblock %}
+
+
+{% block content %}
+  <div class="PosterAdd">
+    <form action="{{ url_for('admin_main') }}" method="post" enctype="multipart/form-data">
+      <input type="file" name="poster" class="ImgLoad" accept="image/" required>
+      <input type="submit" value="Сохранить" class="SaveButton" name="act">
+    </form>
+  </div>
+    
+    {% for i in news %}
+      <div class="Post">
+        <img src="../../../static/img/{{ i.image }}" alt="">
+        <form method="post">
+          <button type="submit" value="{{ i.id }}" class="DeleteButton" name="act" onclick="return window.confirm('Вы точно хотите удалить этот постер?')">
+            Удалить
+          </button>
+        </form>
+      </div>
+    {% endfor %}
+{% endblock %}

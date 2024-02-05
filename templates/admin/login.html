@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='admin_style/images/Icon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/login.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+  <div class="LoginForm">
+    <form method="post">
+      <input type="text" name="FirstField" class="Field" placeholder="UserName">
+      <input type="password" name="Pass" class="Field" placeholder="PassWord">
+      <input type="submit" value="Войти" class="InputButton">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'user/layout.html' %}
+
+{% block pagename %}
+  {{ product.title }}
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/shop/product.css') }}">
+{% endblock %}
+
+
+{% block meta %}
+  <meta name="description" content="{{ product.description }}" />
+  <meta name="keywords" content="{{ product.keywords }}"/>
+  <meta property="og:title" content="{{ product.title }}"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http:// /shop/product{{ product.id }}" />
+  <meta property="og:image" content="http:// /img/shop/ + {{ product.image }}"/>
+{% endblock %}
+
+
+{% block content %}
+  <div class="ItemCont">
+    <div class="ItemName PageName">{{ product.title }}</div>
+    <div class="ItemImg"><img src="{{ url_for('static', filename='img/' + product.image) }}" alt=""></div>
+    <div class="ItemDesc">{{ product.description }}</div>
+    <div class="ItemSpec">
+      <pre>
+Характеристики:
+{{ product.specifications }}
+      </pre>
+    </div>
+    <div class="ItemPrice PageName">Цена: {{ product.price }}₽</div>
+    <div class="ItemQuantity">В наличии: {{ product.quantity }} шт.</div>
+    <a href="{{ url_for('buy_product', id=product.id) }}" style="text-decoration: none; color: black;">
+      <div class="BuyButton">Купить</div>
+    </a>
+    <div class="ItemNum">Артикул: {{ product.article_number }}</div>
+  </div>
+{% endblock %}
+

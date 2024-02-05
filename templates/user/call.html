@@ -1,0 +1,35 @@
+{% extends 'user/layout.html' %}
+
+{% block pagename %}
+  Вызов мастера
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/call/call.css') }}">
+{% endblock %}
+
+
+{% block meta %}
+  <meta name="description" content="" />
+  <meta name="keywords" content="вызов мастера на дом, ремонт авионика, заявка на ремонт, ремонт компьютеров на дом,
+  вызвать мастера на дом, мастер по ремонту оргтехники и компьютеров, авионика"/>
+  <meta property="og:title" content="Вызвать мастера на дом. Квалифицированные инженеры компании 'Авионика' сами приедут за вашим сломанным компьютером или принтером. "/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http:// /call" />
+  <meta property="og:image" content="http:// /static/user_style/images/Logo.png"/>
+{% endblock %}
+
+
+{% block content %}
+  <div class="FormCont">
+    <p class="PageName">Оставить заявку</p>
+      <form method="post">
+        <input type="text" name="name" class="CallInputField" placeholder="Ваше имя" required>
+        <input type="text" name="phone" class="CallInputField" placeholder="Ваш номер телефона" required>
+        <input type="text" name="address" class="CallInputField" placeholder="Ваш адрес">
+        <input type="text" name="device" class="CallInputField" placeholder="Ваше устройство" required>
+        <textarea name="problem" class="Problem" placeholder="Проблема" required></textarea>
+        <input type="submit" value="Отправить" class="CallButton">
+      </form>
+    </div>
+{% endblock %}

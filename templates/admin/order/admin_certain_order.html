@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Заказ №{{ order.id }}</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='admin_style/images/Icon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_order.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+  <div class="OrderDetails">
+    <div class="OrderPoint" style="color: red;">Номер заказа: {{ order.id }}</div>
+    <div class="OrderPoint" style="color: red;">О клиенте:</div>
+    <div class="OrderPoint">{{ order.surname }} {{ order.name }} {{ order.middle_name }}</div>
+    <div class="OrderPoint"><a href="tel:{{ order.phone }}" style="color: blue;">{{ order.phone }}</a></div>
+    <div class="OrderPoint"><a href="mailto:{{ order.e_mail }}" style="color: blue;">{{ order.e_mail }}</a></div>
+    <div class="OrderPoint" style="color: red;">О заказе:</div>
+    <div class="OrderPoint">Товары: <a href="{{ url_for('product', id=product.id) }}" style="color: blue;">{{ product.title }}</a>({{ product.price }}₽ за штуку)  в количестве {{ order.quantity }}шт.</div>
+    <div class="OrderPoint">Стоимость: {{ order.price }}₽</div>
+    <div class="OrderPoint">Дата оформления: {{ order.data }}</div>
+    <div class="OrderPoint">Способ получения: {{ order.type_of_delivery }}</div>
+    <div class="OrderPoint">Адрес доставки: {{ order.address }}</div>
+    <div class="OrderPoint">Статус заказа: {{ order.status }}</div>
+    <div class="OrderPoint">Комментарий:</div>
+    <pre class="OrderComm">{{ order.comment }}</pre>
+    <div style="width: 100%; height: 25px;"></div>
+  </div>
+
+    <div class="EditForm">
+      <form method="post">
+        <p>Изменить количество товара</p>
+        <input class="ChangeField" type="number" value="{{ order.quantity }}" name="quantity" min="1" max="{{ count }}" placeholder="Изменить количество">
+        <p>Изменить адрес доставки</p>
+        <input class="ChangeField" type="text" value="{{ order.address }}" name="address" placeholder="Изменить адрес доставки">
+        <p>Комментарий</p>
+        <textarea name="comment" placeholder="Место для комментария">{{ order.comment }}</textarea>
+        <p>Статус заказа</p>
+        <select name="status">
+          {% if order.status == 'Не рассмотрен' or order.status == 'В обработке' %}
+            <option value="В обработке">В обработке</option>
+            <option value="Завершен">Завершен</option>
+            <option value="Отменен">Отменен</option>
+          {% elif order.status == 'Завершен' %}
+            <option value="В обработке">В обработке</option>
+            <option value="Завершен" selected>Завершен</option>
+            <option value="Отменен">Отменен</option>
+          {% elif order.status == 'Отменен' %}
+            <option value="В обработке">В обработке</option>
+            <option value="Завершен">Завершен</option>
+            <option value="Отменен" selected>Отменен</option>
+          {% endif %}
+        </select>
+        <input class="SaveButton" type="submit" name="act" value="Сохранить">
+        <input class="DeleteButton" type="submit" name="act" value="Удалить" onclick="return window.confirm('Вы точно хотите удалить заказ?')">
+      </form>
+    <a href="{{ url_for('admin_order') }}">
+      <div class="HomeButton">В меню</div>
+    </a>
+    <div style="width: 100%; height: 25px;"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+@media(min-width: 721px){
+.ItemCont{
+  width: 600px;
+  margin: 10px auto;
+  border-radius: 15px;
+  border: 2px solid #0997de;
+}
+
+
+.ItemName{
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ItemImg{
+  width: 100%;
+  height: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+.ItemImg img{
+  height: 300px;
+}
+
+
+.ItemDesc{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ItemSpec{
+  width: 96%;
+  text-align: left;
+  margin: 10px auto;
+}
+
+
+.ItemSpec pre{
+  white-space: pre-wrap;
+}
+
+
+.ItemPrice{
+  margin: 0 0 5px 0;
+}
+
+
+.ItemQuantity{
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
+
+.BuyButton{
+  width: 110px;
+  height: 30px;
+  border: none;
+  background-color: yellow;
+  line-height: 30px;
+  text-align: center;
+  border: 2px solid yellow;
+  margin: 0 auto 50px auto;
+}
+
+
+.BuyButton:hover{
+  border: 2px solid black;
+}
+
+
+.ItemNum{
+  font-size: 10px;
+  text-align: left;
+  margin: 0 0 10px 10px;
+}
+}
+
+
+
+@media(max-width: 720px){
+.ItemCont{
+  width: calc(90% - 4px);
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 2px solid #0997de;
+  font-size: 12px;
+}
+
+
+.ItemName{
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ItemImg{
+  width: 100%;
+  height: 200px;
+  margin: 8px auto;
+  text-align: center;
+}
+
+
+.ItemImg img{
+  height: 200px;
+}
+
+
+.ItemDesc{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ItemSpec{
+  width: 96%;
+  text-align: left;
+  margin: 8px auto;
+}
+
+
+.ItemSpec pre{
+  white-space: pre-wrap;
+}
+
+
+.ItemPrice{
+  margin: 10px auto 5px auto;
+}
+
+
+.ItemQuantity{
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
+
+.BuyButton{
+  width: 80px;
+  height: 25px;
+  border: none;
+  background-color: yellow;
+  line-height: 25px;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+
+
+.BuyButton:hover{
+  border: 1px solid black;
+  width: 83px;
+  height: 23px;
+  line-height: 23px;
+}
+
+
+.ItemNum{
+  font-size: 8px;
+  text-align: left;
+  margin: 0 0 8px 8px;
+}
+}

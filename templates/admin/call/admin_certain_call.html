@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вызов №{{ call.id }}</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='admin_style/images/Icon.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_call.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+  <div class="CallDetails">
+    <div class="CallPoint">О клиенте:</div>
+    <div class="CallPoint">Имя - {{call.name}}</div>
+    <div class="CallPoint">Телефон - <a href="tel:{{call.phone}}">{{call.phone}}</a></div>
+    <div class="CallPoint">Адресс - {{call.address}}</div>
+    <div class="CallPoint">Устройство - {{call.device}}</div>
+    <pre class="CallProblem">Проблема - {{call.problem}}</pre>
+    <div class="CallPoint">Дата обращения - {{call.date}}</div>
+    <div class="CallPoint">Статус - {{call.status}}</div>
+    <a href="/admin/call" style="color: black; text-decoration: none;">
+      <div class="BackButton" onClick="return window.confirm('Вы уверены, что хотите выйти в меню?');">В меню</div>
+    </a>
+    <div style="width: 100%; height: 25px;"></div>
+  </div>
+
+    <div class="Status">
+      <form method="post">
+        <p>Комментарий</p>
+        <textarea name="comment" placeholder="Место для комментария">{{ call.comment }}</textarea>
+        <p>Статус</p>
+        <select size="1" name="status">
+          {% if call.status == 'В обработке' or call.status == 'Не рассмотрен' %}
+            <option value="В обработке" selected>В обработке</option>
+            <option value="Завершен">Завершен</option>>
+            <option value="Отменен">Отменен</option>
+          {% elif call.status == 'Завершен' %}
+            <option value="В обработке">В обработке</option>
+            <option value="Завершен" selected>Завершен</option>>
+            <option value="Отменен">Отменен</option>
+          {% elif call.status == 'Отменен' %}
+            <option value="В обработке">В обработке</option>
+            <option value="Завершен">Завершен</option>>
+            <option value="Отменен" selected>Отменен</option>
+          {% endif %}
+        </select>
+        <input class="SaveButton" type="submit" name="act" value="Подтвердить">
+        <input class="DeleteButton" onClick="return window.confirm('Вы точно хотите удалить вызов?');" type="submit" name="act" value="Удалить">
+      </form>
+      <a href="/admin/call" style="color: black; text-decoration: none;">
+        <div class="BackButton" onClick="return window.confirm('Вы уверены, что хотите выйти в меню?');">В меню</div>
+      </a>
+      <div style="width: 100%; height: 25px;"></div>
+    </div>
+</body>
+</html>

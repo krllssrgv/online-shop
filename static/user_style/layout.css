@@ -1,0 +1,507 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Roboto;
+  animation: appearing 0.8s linear 1;
+}
+
+#wrapper {
+  min-width: 250px;
+  height: auto;
+  width: 100%;
+  max-width: 2125px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 2145px) {
+  #wrapper {
+    border: solid #0997de 10px;
+    border-top: none;
+    border-bottom: none
+  }
+}
+
+
+.PageName {
+    font-weight: bold;
+    color: #0997de;
+    text-align: center;
+}
+
+
+
+/* Desktop version */
+@media (min-width: 721px) {
+.ToCall{
+  display: none;
+  visibility: hidden;
+}
+
+.ToCall img{
+  width: 0px;
+  height: 0px;
+}
+
+
+#CallWindow{
+  width: 400px;
+  height: 140px;
+  top: calc(50% - 70px);
+  left: calc(50% - 200px);
+  background-color: white;
+  border: 3px solid #0997de;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 3;
+
+  visibility: hidden;
+  display: none;
+  font-size: 0px;
+}
+
+
+#MapWindow{
+  width: 400px;
+  height: 140px;
+  top: calc(50% - 70px);
+  left: calc(50% - 200px);
+  background-color: white;
+  border: 3px solid #0997de;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 3;
+
+  visibility: hidden;
+  display: none;
+  font-size: 0px;
+}
+
+
+.ContactLink{
+  text-decoration: none;
+  color: #0997de;
+}
+
+
+.ContactLink p{
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+
+.CloseBtn{
+  width: 100%;
+  height: 28px;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+
+.Logo {
+  width: 394px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+
+.Logo img{
+  width: 394px;
+  height: 100px;
+}
+
+
+.Specs{
+  width: 100%;
+  height: 60px;
+  background-color: #0997de;
+}
+
+
+.CBtn{
+  width: 34px;
+  height: 34px;
+  float: right;
+  margin: 7px 15px 7px 0px;
+  padding: 6px;
+  background-color: white;
+  border-radius: 20%;
+}
+
+
+.CBtn img{
+  width: 34px;
+  height: 34px;
+}
+
+
+.Buttons {
+  height: 30px;
+  min-width: 399px;
+  width: auto;
+  background-color: white;
+  border-radius: 4px;
+  margin: 15px 0 15px 15px;
+  float: left;
+}
+
+
+.Button {
+  height: 30px;
+  min-width: 99px;
+  width: auto;
+  float: left;
+  color: black;
+  border-right: 1px solid black;
+}
+
+
+.LeftBtn{
+  border-radius: 4px 0 0 4px;
+}
+
+
+.RightBtn{
+  border-radius: 0 4px 4px 0;
+  border-right: none;
+}
+
+
+.Button p {
+  margin: 8px 0px;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+
+.Button:hover {
+  animation: ForButton 0.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+.ButtonImg {
+  visibility: hidden;
+  display: none;
+}
+
+
+
+/* MAIN */
+main {
+  padding: 0 2%;
+  width: 86%;
+  border-radius: 20px;
+  margin: 0 auto 40px auto;
+}
+
+
+main p {
+  color: black;
+}
+
+
+main li {
+  text-align: left;
+  font-size: 20px;
+  color: black;
+}
+
+
+/* FOOTER */
+footer {
+  height: 38px;
+  padding: 20px 2%;
+  width: 96%;
+  background-color: #0997de;
+}
+
+
+.FootLeft{
+  width: 38px;
+  height: 38px;
+  float: left;
+}
+
+
+.FootText{
+  width: calc(100% - 76px);
+  color: white;
+  margin: 8px 0px 8px 0px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  float: left;
+}
+
+
+.FootRight{
+  width: 38px;
+  height: 38px;
+  float: right;
+  text-align: right;
+}
+
+
+.FootRight img{
+  width: 38px;
+  height: 38px;
+}
+}
+
+
+
+/* Mobile version */
+@media (max-width: 720px) {
+#CallWindow{
+  width: 400px;
+  height: 140px;
+  top: calc(50% - 70px);
+  left: calc(50% - 200px);
+  background-color: white;
+  border: 3px solid #0997de;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+
+  visibility: hidden;
+  display: none;
+  font-size: 0px;
+}
+
+
+#MapWindow{
+  width: 400px;
+  height: 140px;
+  top: calc(50% - 70px);
+  left: calc(50% - 200px);
+  background-color: white;
+  border: 3px solid #0997de;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+
+  visibility: hidden;
+  display: none;
+  font-size: 0px;
+}
+
+
+@media (min-width: 351px) {
+.ToCall{
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  position: fixed;
+  margin: 16px 0 0 16px;
+  background-color: #0997de;
+  text-align: center;
+}
+
+
+.ToCall img{
+  width: 24px;
+}
+}
+
+
+@media (max-width: 350px){
+.ToCall{
+  width: 18px;
+  height: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  position: fixed;
+  margin: 10px 0 0 10px;
+  background-color: #0997de;
+}
+
+
+.ToCall img{
+  width: 18px;
+}
+}
+
+
+
+/* HEADER */
+header {
+  width: 100%;
+  min-height: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+.Logo {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+
+.Logo img{
+  width: 70%;
+}
+
+
+.Specs{
+  width: 100%;
+  height: auto;
+}
+
+
+.CBtn{
+  display: none;
+  visibility: hidden;
+}
+
+
+.CBtn img{
+  width: 0px;
+  height: 0px;
+}
+
+
+.Buttons {
+  width: 100%;
+  height: 40px;
+  padding: 5px 0px;
+  background-color: #0997de;
+}
+
+
+.Button {
+  width: 25%;
+  height: 40px;
+  float: left;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+
+@media (min-width: 421px) {
+  .Button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) and (min-width: 356px){
+  .Button {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 355px){
+  .Button {
+    font-size: 9px;
+  }
+}
+
+
+.Button p {
+  width: 92%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ButtonImg {
+  width: 20px;
+  margin-top: 3px;
+}
+
+
+
+/* MAIN */
+main {
+  width: 94%;
+  height: auto;
+  margin: 0 auto 20px auto;
+}
+
+
+main p {
+  font-size: 18px;
+  color: black;
+}
+
+
+main li {
+  text-align: left;
+  font-size: 18px;
+  color: black;
+}
+
+
+/* FOOTER */
+footer {
+  width: 96%;
+  background-color: #0997de;
+  min-height: 20px;
+  color: white;
+  text-align: center;
+  font-family: Roboto;
+  padding: 10px 2%;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+
+.FootLeft{
+  display: none;
+  visibility: hidden;
+}
+
+
+.FootText{
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  float: left;
+}
+
+
+.FootRight{
+  display: none;
+  visibility: hidden;
+}
+}
+
+
+
+/* Features */
+@keyframes appearing {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+@keyframes ForButton {
+  0% {background-color: white;}
+  100% {background-color: #807d7d;}
+}

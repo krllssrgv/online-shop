@@ -1,0 +1,735 @@
+*{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+@media (min-width: 721px) {
+body {
+  padding-top: 200px;
+  animation: appearing 1s linear 1;
+}
+
+
+header {
+  width: 100%;
+  height: 108px;
+  background-color: yellow;
+  border-bottom: 4px solid #a8a8a8;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+}
+
+
+.Logo {
+  width: 315px;
+  height: 80px;
+  margin: 0;
+  float: left;
+}
+
+
+.Logo img{
+  width: 315px;
+  height: 80px;
+}
+
+
+.Specs{
+  width: 350px;
+  height: 98px;
+  float: right;
+  margin: 5px 10px 5px 0px;
+  border-right: 3px solid black;
+}
+
+
+.ContData{
+  width: 200px;
+  height: 48px;
+  float: right;
+  margin-right: 10px;
+}
+
+
+.ContData p {
+  margin: 3px 0px;
+  text-align: right;
+}
+
+
+.ContData p a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.ToCall{
+  display: none;
+  visibility: hidden;
+}
+
+
+.ToCall img{
+  width: 0px;
+  height: 0px;
+}
+
+
+.Buttons {
+  height: 30px;
+  width: 100%;
+  margin: 10px 10px 10px 0;
+}
+
+
+.Button {
+  height: 30px;
+  min-width: 104px;
+  float: right;
+  color: black;
+  line-height: 30px;
+}
+
+
+.ButtonImg {
+  visibility: hidden;
+  display: none;
+}
+
+
+.Button p {
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+.Button:hover {
+  animation: ForButton 0.5s linear 1;
+  animation-fill-mode: forwards;
+}
+
+
+.LeftBtn{
+  border-radius: 4px 0 0 4px;
+  display: none;
+  visibility: hidden;
+}
+
+
+.RightBtn{
+  border-right: none;
+}
+
+
+
+
+
+.TimeTable {
+  width: 315px;
+  height: 108px;
+  margin: 0px auto 50px auto;
+}
+
+
+.TimeConf {
+  width: auto;
+  float: left;
+  height: 108px;
+}
+
+
+.TimeConf p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+
+.TimeText {
+  height: 77px;
+  margin: 15.5px 0 15.5px 10px;
+}
+
+
+.TimeConf img {
+  width: 100px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+}
+
+
+.PosterCont{
+  width: 500px;
+  border: 4px solid #0997de;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+
+.PosterCont img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+.ServiceTitle{
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+
+.Services {
+  width: 500px;
+  height: 270px;
+  margin: 10px auto 50px auto;
+}
+
+
+.Service {
+  width: 160px;
+  height: 220px;
+  float: left;
+  text-align: center;
+}
+
+
+.Service p{
+  margin: 10px 0px;
+}
+
+
+.SerI {
+  margin-left: 10px;
+}
+
+
+.Service div {
+  width: 152px;
+  height: 152px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+}
+
+
+.Service img {
+  margin: 31px 0;
+  margin: 11px
+  width: 90px;
+  height: 90px;
+}
+
+
+.SCenter {
+  width: 620px;
+  height: 210px;
+  text-align: center;
+  margin: 10px auto 50px auto;
+}
+
+
+.SCenter img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+}
+
+
+.SCenter p{
+  margin: 0 0 15px 0;
+}
+
+
+.Advantages {
+  width: 620px;
+  height: 260px;
+  margin: 10px auto 50px auto;
+  text-align: center;
+}
+
+
+.Advantage {
+  width: 100px;
+  height: 200px;
+  float: left;
+  font-size: 14px;
+}
+
+
+.AdvI {
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+
+AdvI p{
+  margin: 5px 0;
+}
+
+
+.Advantage img {
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+}
+
+
+.HSG {
+  width: 100px;
+  height: 200px;
+  float: left;
+}
+
+
+.HSCont{
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+  text-align: center;
+}
+
+
+.HSG img{
+  width: 75px;
+  height: 75px;
+  border: none;
+  margin: 8.5px 0;
+}
+
+
+.Advantage p {
+  margin: 5px 0;
+}
+
+
+.Location {
+  width: 290px;
+  height: 88px;
+  margin: 10px auto 30px auto;
+}
+
+
+.LocConf {
+  float: left;
+  height: 88px;
+}
+
+
+.LocConf img {
+  width: 80px;
+  border-radius: 12px;
+  border: solid 4px #0997de;
+}
+
+
+.LocConf p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.LocText {
+  width: 184px;
+  height: 57px;
+  margin: 25.5px 0 25.5px 10px;
+}
+
+
+.Map {
+  margin: 20px auto;
+  width: 70%;
+  height: 400px;
+}
+}
+
+
+
+@media (max-width: 720px) {
+header {
+  width: 100%;
+  min-height: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+
+.Logo {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+
+.Logo img{
+  width: 70%;
+}
+
+
+.Specs{
+  width: 100%;
+  height: auto;
+}
+
+
+.ContData{
+  display: none;
+  visibility: hidden;
+}
+
+
+@media (min-width: 351px) {
+.ToCall{
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  position: fixed;
+  margin: 16px 0 0 16px;
+  background-color: #0997de;
+  text-align: center;
+}
+
+
+.ToCall img{
+  width: 24px;
+}
+}
+
+
+@media (max-width: 350px) {
+.ToCall{
+  width: 18px;
+  height: 18px;
+  padding: 6px;
+  border-radius: 50%;
+  position: fixed;
+  margin: 10px 0 0 10px;
+  background-color: #0997de;
+}
+
+
+.ToCall img{
+  width: 18px;
+}
+}
+
+
+.Buttons {
+  width: 100%;
+  height: 40px;
+  padding: 5px 0px;
+  background-color: #0997de;
+}
+
+
+.Button {
+  width: 25%;
+  height: 40px;
+  float: right;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+
+@media (min-width: 421px) {
+  .Button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) and (min-width: 356px){
+  .Button {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 355px) and (min-width: 296px){
+  .Button {
+    font-size: 9px;
+  }
+}
+
+
+@media (max-width: 295px){
+  .Button {
+    font-size: 7.5px;
+  }
+}
+
+
+.Button p {
+  width: 92%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.ButtonImg {
+  width: 20px;
+  margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+.TimeTable {
+  width: 180px;
+  height: 150px;
+  margin: 5px auto;
+}
+
+
+.TimeConf {
+  width: 100%;
+  height: 68px;
+  text-align: center;
+}
+
+
+.TimeConf p {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+
+.TimeTable img {
+  width: 60px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+  margin: 0 0 10px 0;
+}
+
+
+.PosterCont{
+  width: calc(100% - 18px);
+  border: 3px solid #0997de;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+.PosterCont img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+.ServiceTitle{
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+
+.Services {
+  width: 100px;
+  height: 550px;
+  margin: 10px auto 15px auto;
+  text-align: center;
+}
+
+
+.Service {
+  width: 100px;
+  height: 170px;
+  margin: 10px 0 10px 0;
+}
+
+
+.Service div {
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+}
+
+
+.Service p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+
+#Long {
+  position: relative;
+  left: -8px;
+}
+
+
+.Service img {
+  width: 80px;
+  height: 80px;
+  margin: 6px;
+}
+
+
+@media (min-width: 400px){
+  .SCenter {
+    width: 100%;
+    height: 210px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+}
+
+
+@media (max-width: 399px){
+  .SCenter {
+    width: 100%;
+    height: 235px;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+}
+
+.SCenter img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+}
+
+
+.SCenter p{
+  font-size: 14px;
+}
+
+
+.Advantages {
+  width: 100%;
+  height: 960px;
+  margin: 10px 0 40px 0;
+  text-align: center;
+}
+
+
+.Advantages p{
+  font-size: 14px;
+}
+
+
+.Advantage {
+  width: 100px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+
+.AdvI {
+  margin: 0 auto 10px auto;
+}
+
+
+.Advantage img {
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+}
+
+
+.HSG{
+  width: 100px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+
+.HSCont{
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+  text-align: center;
+}
+
+
+.HSCont img{
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: none;
+  margin: 8.5px 0;
+}
+
+
+.HSImg{
+  border-radius: 0;
+}
+
+
+.Advantage p {
+ margin: 5px 0;
+}
+
+
+.Location {
+  width: 180px;
+  height: 150px;
+  margin: 5px auto;
+}
+
+
+.LocConf {
+  width: 100%;
+  height: 68px;
+  text-align: center;
+}
+
+
+.LocConf img {
+  width: 60px;
+  border-radius: 8px;
+  border: solid 4px #0997de;
+  margin: 0;
+}
+
+
+.LocConf p {
+  margin: 0;
+  font-size: 12px;
+}
+
+
+.LocText {
+  width: 184px;
+  height: 57px;
+  margin: 25.5px 0 25.5px 10px;
+}
+
+
+.Map {
+  width: 80%;
+  margin: 0 auto;
+  height: 350px;
+}
+}
+
+
+@keyframes appearing {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}

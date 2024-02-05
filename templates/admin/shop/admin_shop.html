@@ -1,0 +1,32 @@
+{% extends 'admin/admin_layout.html' %}
+
+{% block pagename %}
+  Товары
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin_style/admin_shop.css') }}">
+{% endblock %}
+
+
+{% block content %}
+    <a class="AddLink" href="{{ url_for('admin_shop_add') }}">
+      <div class="AddButton">
+        Добавить
+      </div>
+    </a>
+
+    {% for i in items %}
+      <div class="Item">
+        <div class="ItemNum">{{ i.article_number }}</div>
+        <div class="ItemImg">
+          <img src="../../../static/img/{{ i.image }}" alt=""/>
+        </div>
+        <a href="{{ url_for('admin_certain_product', id=i.id) }}">
+          <div class="ItemDetail">{{ i.title }}</div>
+        </a>
+        <div class="ItemQuan">{{ i.quantity }} шт.</div>
+        <div class="ItemPrice">{{ i.price }} ₽</div>
+      </div>
+    {% endfor %}
+{% endblock %}

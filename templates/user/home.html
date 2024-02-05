@@ -1,0 +1,175 @@
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_style/home/home.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='user_style/images/Icon.png') }}" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="авионика, ремонт принтеров, сервисный центр, магазин компьютерной техники,
+    компьютеры, мониторы, картриджи, заправка картриджей, ремонт мониторов, ремонт телевизоров, компьютерные комплектующие,
+    сборка компьютеров, ремонт ноутбуков, клавиатуры, оргтехника, переферийные устройства"/>
+  <meta property="og:title" content="Авионика - главная. Основная информация о компании, график работы, адрес, новости."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http:// /" />
+  <meta property="og:image" content="http:// /static/user_style/images/Logo.png"/>
+</head>
+
+<body>
+<a href="tel:+79777423747">
+    <div class="ToCall">
+      <img src="{{ url_for('static', filename='user_style/images/Phone.png') }}" alt="">
+    </div>
+  </a>
+
+  <header> <!-- Шапка -->
+    <div class="Logo">
+      <img src="{{ url_for('static', filename='user_style/images/Logo.png') }}">
+    </div>
+
+    <div class="Specs">
+      <div class="Buttons">
+        <a href="{{ url_for('about') }}"><div class="Button RightBtn"><img src="{{ url_for('static', filename='user_style/images/Info.png') }}" class="ButtonImg"><p>О компании</p></div></a>
+        <a href="{{ url_for('call') }}"><div class="Button"><img src="{{ url_for('static', filename='user_style/images/Call.png') }}" class="ButtonImg"><p>Вызов мастера</p></div></a>
+        <a href="{{ url_for('shop') }}"><div class="Button"><img src="{{ url_for('static', filename='user_style/images/Shop.png') }}" class="ButtonImg"><p>Магазин</p></div></a>
+        <a href="{{ url_for('home') }}"><div class="Button LeftBtn"><img src="{{ url_for('static', filename='user_style/images/Main.png') }}" class="ButtonImg"><p>Главная</p></div></a>
+      </div>
+
+      <div class="ContData">
+        <p>
+          <a href="https://yandex.ru/maps/-/CCUaZJcmKB" target="_blank">
+            Серпухов, Володарского, 7
+          </a>
+        </p>
+
+        <p>
+          <a href="tel:+79777423747">
+            +7 (977) 742-37-47
+          </a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+<div class="TimeTable">
+  <div class="TimeConf">
+    <img src="{{ url_for('static', filename='user_style/home/Time.png') }}" alt="">
+  </div>
+
+  <div class="TimeConf TimeText">
+      <p>График работы</p>
+      <p>Пн.-Пт. - С 9:00 до 19:00</p>
+      <p>Сб. - С 10:00 до 16:00</p>
+  </div>
+</div>
+
+
+{% if news %}
+<div class="PosterCont">
+  {% for i in news %}
+  <img src="../../static/img/{{ i.image }}" alt="">
+  {% endfor %}
+</div>
+{% endif %}
+
+
+<p class="ServiceTitle">
+  Мы предлагаем ассортимент техники для офиса и дома.
+</p>
+<div class="Services">
+
+  <div class="Service">
+    <div><img src="{{ url_for('static', filename='user_style/home/Computer.png') }}"></div>
+    <p>Системные блоки и мониторы.</p>
+  </div>
+
+  <div class="Service SerI">
+    <div><img src="{{ url_for('static', filename='user_style/home/Printer.png') }}"></div>
+    <p>Принтеры, сканеры, копиры.</p>
+  </div>
+
+  <div class="Service SerI">
+    <div><img src="{{ url_for('static', filename='user_style/home/KeyBoard.png') }}"></div>
+    <p id="Long">Комплектующие.</p>
+  </div>
+
+</div>
+
+
+
+<div class="SCenter">
+  <p style="margin-top: 0px;">
+    Мы не только продаем Вам технику, но и обслуживаем и чиним её.
+    Для этого мы создали собственный <a href="http://printserv.su/" target="_blank">сервисный центр</a>.
+  </p>
+  <img src="{{ url_for('static', filename='user_style/home/Service.png') }}">
+</div>
+
+
+
+<div class="Advantages">
+  <p style="margin-top: 0px;">Почему Вы должны выбрать именно нас?</p>
+
+  <div class="Advantage AdvI">
+    <img src="{{ url_for('static', filename='user_style/home/Order.png') }}" alt="">
+    <p>Вызов мастера на дом</p>
+  </div>
+
+  <div class="AdvI HSG">
+    <div class="HSCont">
+      <img src="{{ url_for('static', filename='user_style/home/HaSG.jpg') }}" alt="">
+    </div>
+    <p style="margin: 5px 0;">Мы работаем с 1997 года</p>
+  </div>
+
+  <div class="Advantage AdvI">
+    <div>
+      <img src="{{ url_for('static', filename='user_style/home/Price.png') }}" alt="">
+    </div>
+    <p>У нас адекватные цены</p>
+  </div>
+
+  <div class="Advantage AdvI">
+    <div>
+      <img src="{{ url_for('static', filename='user_style/home/Warranty.png') }}" alt="">
+    </div>
+    <p>Гарантия до 6 месяцев</p>
+  </div>
+
+  <div class="Advantage">
+    <div>
+      <img src="{{ url_for('static', filename='user_style/home/Speed.png') }}" alt="">
+    </div>
+    <p>Проводим диагностику в день обращения</p>
+  </div>
+
+</div>
+
+
+
+<div class="Location">
+  <div class="LocConf">
+     <img src="{{ url_for('static', filename='user_style/home/Address.png') }}" alt="">
+  </div>
+
+  <div class="LocConf LocText">
+    <p>Наш офис находится по адресу: <a href="https://yandex.ru/maps/-/CCUaZJcmKB" target="_blank">Серпухов, Володарского, 7</a>.</p>
+  </div>
+</div>
+
+
+<div class="Map">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4ef18bf5dc20cf75120f1c36a242dac8480b9ed7dda9e5247f796199cd562911&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
+  </script>
+</div>
+</body>
+</html>
